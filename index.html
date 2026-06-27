@@ -180,6 +180,31 @@
       font-size: 0.95rem;
     }
 
+    .phones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .phone {
+      text-align: center;
+    }
+
+    .phone img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 18px;
+      border: 6px solid var(--dark);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .phone p {
+      margin-top: 0.85rem;
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 500;
+    }
+
     .cta {
       background: var(--dark);
       color: #fff;
@@ -218,6 +243,7 @@
     <ul>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#features">Features</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
       <li><a href="#mission">Mission</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -286,6 +312,29 @@
           <div class="icon">🔒</div>
           <h3>Private by Design</h3>
           <p>Only the device owner and the people they explicitly share with can see a device's location and alerts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots">
+      <h2>See It In Action</h2>
+      <p class="lead">A look at the GuardianDot app — the same tools caregivers use every day.</p>
+      <div class="phones">
+        <div class="phone">
+          <img src="images/app-login.png" alt="GuardianDot app sign-in screen" loading="lazy">
+          <p>Simple, secure sign-in</p>
+        </div>
+        <div class="phone">
+          <img src="images/app-home-map.png" alt="Home screen showing a live map with a registered device" loading="lazy">
+          <p>Live map of every device</p>
+        </div>
+        <div class="phone">
+          <img src="images/app-fall-alert.png" alt="Fall detected alert dialog over the map" loading="lazy">
+          <p>Instant fall &amp; help alerts</p>
+        </div>
+        <div class="phone">
+          <img src="images/app-device-detail.png" alt="Device detail screen with GPS coordinates, speed, and last update time" loading="lazy">
+          <p>Detailed location history</p>
         </div>
       </div>
     </section>
