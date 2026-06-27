@@ -40,9 +40,18 @@
     }
 
     nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-weight: 700;
       font-size: 1.2rem;
       color: var(--dark);
+    }
+
+    nav .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
     }
 
     nav .brand span {
@@ -67,6 +76,13 @@
       color: #fff;
       padding: 5rem 1.5rem;
       text-align: center;
+    }
+
+    header.hero .hero-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
     }
 
     header.hero h1 {
@@ -239,7 +255,7 @@
 </head>
 <body>
   <nav>
-    <div class="brand">Guardian<span>Dot</span></div>
+    <div class="brand"><img src="images/logo.png" alt="GuardianDot logo"> Guardian<span>Dot</span></div>
     <ul>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#features">Features</a></li>
@@ -250,6 +266,7 @@
   </nav>
 
   <header class="hero">
+    <img src="images/logo.png" alt="GuardianDot logo" class="hero-logo">
     <h1>Safety that stays with the people you love.</h1>
     <p>GuardianDot is a nonprofit initiative providing affordable GPS safety devices and real-time location sharing for seniors, children, and individuals who need an extra layer of protection.</p>
     <a class="btn" href="#contact">Get a Device</a>
@@ -350,12 +367,12 @@
     <section class="cta" id="contact">
       <h2>Help Us Reach More Families</h2>
       <p>Whether you want to request a device, volunteer, or make a donation, we'd love to hear from you.</p>
-      <a class="btn" href="mailto:hello@guardiandot.org">hello@guardiandot.org</a>
+      <a class="btn" href="mailto:zhouzhouxuxu@gmail.com">zhouzhouxuxu@gmail.com</a>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 GuardianDot. A nonprofit project. <a href="mailto:hello@guardiandot.org">Contact us</a>
+    &copy; 2026 GuardianDot. A nonprofit project. <a href="mailto:zhouzhouxuxu@gmail.com">Contact us</a>
   </footer>
 </body>
 </html>
