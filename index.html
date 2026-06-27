@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guardian</title>
+  <title>GuardianDot — Safety That Stays With Them</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    :root {
+      --accent: #FF6B47;
+      --dark: #2C3E50;
     }
 
     body {
@@ -18,71 +23,290 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #2c3e50;
+    a {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--dark);
+    }
+
+    nav .brand span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, var(--dark), #1a2733);
       color: #fff;
-      padding: 4rem 1.5rem;
+      padding: 5rem 1.5rem;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    header.hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
     }
 
-    header p {
-      font-size: 1.1rem;
+    header.hero p {
+      font-size: 1.15rem;
       color: #cfd8dc;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.75rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #cfd8dc;
     }
 
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem;
     }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 4rem;
     }
 
-    h2 {
+    section h2 {
+      font-size: 1.8rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    section .lead {
+      text-align: center;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card .icon {
+      font-size: 1.75rem;
       margin-bottom: 0.75rem;
-      color: #2c3e50;
+    }
+
+    .card h3 {
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .steps .step .num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+
+    .steps .step h3 {
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .steps .step p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+    }
+
+    .cta h2 {
+      color: #fff;
+    }
+
+    .cta p {
+      color: #cfd8dc;
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       color: #777;
       font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+
+    footer a {
+      color: #777;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Guardian</h1>
-    <p>A nonprofit dedicated to making a difference.</p>
+  <nav>
+    <div class="brand">Guardian<span>Dot</span></div>
+    <ul>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Safety that stays with the people you love.</h1>
+    <p>GuardianDot is a nonprofit initiative providing affordable GPS safety devices and real-time location sharing for seniors, children, and individuals who need an extra layer of protection.</p>
+    <a class="btn" href="#contact">Get a Device</a>
+    <a class="btn secondary" href="#mission">Support Our Mission</a>
   </header>
 
   <main>
-    <section>
-      <h2>About Us</h2>
-      <p>Guardian is committed to supporting our community through outreach, education, and advocacy. This page is a starting point — replace this content with your organization's mission and story.</p>
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <p class="lead">A small wearable or stationary device, a live map, and the people who care — all connected.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Wear or Place the Device</h3>
+          <p>Each GuardianDot device is registered to a person — worn on the body or placed in a fixed location like a home.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Track in Real Time</h3>
+          <p>Location updates stream live to a map, so caregivers always know where their loved one is.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Get Alerted Instantly</h3>
+          <p>A press of the help button — or an automatic fall detection — sends an immediate alert to every connected caregiver.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Get Involved</h2>
-      <p>Interested in volunteering, donating, or partnering with us? Reach out and let's make an impact together.</p>
+    <section id="features">
+      <h2>Built for Peace of Mind</h2>
+      <p class="lead">Every feature exists to answer one question fast: are they safe?</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📍</div>
+          <h3>Live GPS Tracking</h3>
+          <p>See a device's last known location on a map updated in real time, with history of recent movement.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🆘</div>
+          <h3>One-Touch Help Button</h3>
+          <p>A single press sends an immediate "help requested" alert to everyone watching over that device.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤕</div>
+          <h3>Fall Detection</h3>
+          <p>Wearable devices can detect a fall automatically and notify caregivers without anyone needing to act.</p>
+        </div>
+        <div class="card">
+          <div class="icon">👪</div>
+          <h3>Caregiver Sharing</h3>
+          <p>Owners can share access to a device with family members or caregivers, who get the same real-time visibility.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏠</div>
+          <h3>Wearable & Stationary</h3>
+          <p>Use a wearable device for someone on the move, or a stationary unit to monitor a fixed location like a home.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3>Private by Design</h3>
+          <p>Only the device owner and the people they explicitly share with can see a device's location and alerts.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@example.org">hello@example.org</a></p>
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p class="lead">GuardianDot exists because safety shouldn't be a luxury.</p>
+      <p style="max-width: 640px; margin: 0 auto; text-align: center; color: #444;">
+        We believe every family should have access to reliable, affordable tools that help keep their loved ones safe — whether that's a child walking home from school, a senior living independently, or someone managing a health condition that puts them at risk. As a nonprofit, we provide devices, app access, and support at little to no cost to the families who need it most, funded by donations and community partners.
+      </p>
+    </section>
+
+    <section class="cta" id="contact">
+      <h2>Help Us Reach More Families</h2>
+      <p>Whether you want to request a device, volunteer, or make a donation, we'd love to hear from you.</p>
+      <a class="btn" href="mailto:hello@guardiandot.org">hello@guardiandot.org</a>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Guardian. All rights reserved.
+    &copy; 2026 GuardianDot. A nonprofit project. <a href="mailto:hello@guardiandot.org">Contact us</a>
   </footer>
 </body>
 </html>
